@@ -257,7 +257,7 @@ if __name__ == "__main__":
     bots : List[Bot] = []
     compatibility_issues = []
 
-    bot_root = os.path.join(os.getcwd(), "bots")
+    bot_root = os.path.join(os.getcwd(), "NewBot")
 
     if not os.path.isdir(bot_root): 
         print("Bot directory does not exist.")
