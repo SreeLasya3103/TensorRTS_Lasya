@@ -1,3 +1,4 @@
+import wandb
 import random
 import abc
 from typing import Dict, List, Mapping, Tuple, Set
@@ -5,6 +6,8 @@ from entity_gym.env import Observation
 
 from entity_gym.runner import CliRunner
 from entity_gym.env import *
+
+wandb.init(project='Tensor_RTS_Lasya', entity='lasyamutukula')
 
 class BaseTensorRTS(Environment, metaclass=abc.ABCMeta): 
 
@@ -337,6 +340,9 @@ if __name__ == "__main__":  # This is to run wth agents
 
     runner.assign_players(random_agent)
     runner.run()
+
+wandb.log({"result": runner.results})
+wandb.finish()
     
 if __name__ == "__main__":  #this is to run cli
     env = TensorRTS()
