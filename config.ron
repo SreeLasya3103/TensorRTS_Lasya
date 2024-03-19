@@ -1,5 +1,5 @@
 Config(
-    total_timesteps: 50000,
+    total_timesteps: 10000,
     rollout: (
         steps: 32,
         num_envs: 64,
@@ -9,6 +9,4 @@ Config(
         bs: 512,
         lr: 0.005,
     ),
-    wandb_project_name: "TensorRTS_ENN",
-    wandb_entity: "jp4"
 )
