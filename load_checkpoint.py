@@ -8,7 +8,7 @@ from TensorRTS import TensorRTS
 
 if __name__ == "__main__": # This is to load a model
     # Change the checkpoint to your own folder name.
-    checkpoint = load_checkpoint('checkpoints/latest-step000000018432')
+    checkpoint = load_checkpoint('checkpoints/latest-step000000008192')
     agent = RogueNetAgent(checkpoint.state.agent)
     env = TensorRTS()
     obs = env.reset()
